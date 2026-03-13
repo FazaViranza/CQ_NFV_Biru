@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Policy;
 
 
 namespace PraktikumADO
@@ -136,6 +137,29 @@ namespace PraktikumADO
                 int jumlah = (int)cmd.ExecuteScalar();
 
                 txtHasil.text = jumlah.ToString();
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdateMK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi();
+                conn.Open();
+
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+
+                cmd = new SqlCommand(query, conn);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
 
                 conn.Close();
             }
