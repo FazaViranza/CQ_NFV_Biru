@@ -31,11 +31,6 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHitungMhs_Click(object sender, EventArgs e)
         {
             try
@@ -49,7 +44,7 @@ namespace PraktikumADO
 
                 int jumlah = (int)cmd.ExecuteScalar();
 
-                txtHasil.text = jumlah.ToString();
+                txtHasil.Text = jumlah.ToString();
 
                 conn.Close();
             }
@@ -113,7 +108,7 @@ namespace PraktikumADO
 
                 int rowsAffected = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
+                MessageBox.Show("Jumlah baris terpengaruh : " + rowsAffected);
 
                 conn.Close();
             }
@@ -136,7 +131,7 @@ namespace PraktikumADO
 
                 int jumlah = (int)cmd.ExecuteScalar();
 
-                txtHasil.text = jumlah.ToString();
+                txtHasil.Text = jumlah.ToString();
 
                 conn.Close();
             }
@@ -159,7 +154,7 @@ namespace PraktikumADO
 
                 int rowsAffected = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
+                MessageBox.Show("Jumlah baris terpengaruh : " + rowsAffected);
 
                 conn.Close();
             }
@@ -182,7 +177,7 @@ namespace PraktikumADO
 
                 int rowsAffected = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Data Berhasil Ditambahlan : " + hasil);
+                MessageBox.Show("Data Berhasil Ditambahlan : " + rowsAffected);
 
                 conn.Close();
             }
@@ -190,6 +185,11 @@ namespace PraktikumADO
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtHasil_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
