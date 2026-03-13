@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnConnect = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHitungMhs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -41,21 +41,21 @@
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnHitungMhs
             // 
-            this.button1.Location = new System.Drawing.Point(324, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnHitungMhs.Location = new System.Drawing.Point(324, 343);
+            this.btnHitungMhs.Name = "btnHitungMhs";
+            this.btnHitungMhs.Size = new System.Drawing.Size(75, 23);
+            this.btnHitungMhs.TabIndex = 1;
+            this.btnHitungMhs.Text = "Hitung Mhs";
+            this.btnHitungMhs.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnHitungMhs);
             this.Controls.Add(this.btnConnect);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -66,7 +66,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHitungMhs;
     }
 }
 
