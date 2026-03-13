@@ -21,7 +21,7 @@ namespace PraktikumADO
         private void Koneksi()
         {
             conn = new SqlConnection(
-                "Data Source=LAPTOP-QL2H17RM;Initial Catalog=Universitas;Integrated Security=True"
+                "Data Source=LAPTOP-QL2H17RM;Initial Catalog=DBAkademikADO;Integrated Security=True"
              );
 
         }
